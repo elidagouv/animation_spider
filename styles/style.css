@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(https://media.istockphoto.com/id/460272003/photo/manhattan-at-new-york-city.jpg?s=612x612&w=0&k=20&c=GtVN--Fj-dU6TfUn-kYcUT3ynTKveItazC6L9r9fhBw=) no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+}
+
+@keyframes moverEgirar{
+    from {
+      transform: translate(0, 0) rotate(0); /* Posição inicial*/
+    }
+
+    50%{
+        transform: translate(200%, -50px) rotate(180deg); /*move o elemento para a direita (200% no eixo X) e para cima (-50px no eixo Y)*/
+    }
+
+    to{
+      transform: translate(calc(100vw - 200px), 0) rotate(360deg); /* Posição final (lado direito) */
+    }
+}
+
+img{
+    position: absolute;
+    width: 200px;
+    margin: 70px;
+    top: 160px;
+    animation: moverEgirar 0.6s ease-out 1s;
+}
+
+#title{
+    margin: 30px;
+}
+
+h1{
+    font-family: 'Bebas Neue';
+    color: rgb(158, 8, 8);
+    font-size: 50px;
+}
